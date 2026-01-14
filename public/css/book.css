@@ -1,0 +1,37 @@
+.book-detail p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+.book-detail span {
+    display:block;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.related-book-card {
+    height: 250px;   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#btn-back {
+    display: block;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: auto auto;
+    
+}
+
+header a:hover {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+}

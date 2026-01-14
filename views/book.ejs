@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head')%>
+<div class="container mx-auto min-vh-100 d-flex flex-column">
+<header class="mb-lg-3 d-flex align-items-center mt-lg-3">
+    <img src="/image/favicon.svg" alt="logo" width="64" height="64">
+    <nav>
+        <a href="/">Home Page</a>
+        <a href="/book/<%= book.title %>"><%= book.title %></a>
+    </nav>
+</header>
+<main>
+    <div>
+        <%-include('partials/bookDetail/book')%>
+    </div>
+
+    <!-- Related books in the same category -->
+    <section>
+        <%-include('partials/bookDetail/related-books')%>
+    </section>
+
+    <!-- Back button here -->
+      <a  href="/"><button id="btn-back">Back</button></a>
+  </main>
+    
+ <!-- Footer -->
+    <%-include('partials/footer')%>
+</div>
+<!-- Including Boostrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<section id="reading-list" class="col-lg-8 d-flex flex-column">
+  <div class="list-title d-flex flex-column align-items-end mb-3">
+    <h2>Recommended <b>READING LIST</b></h2>
+    <a id="refresh-button" href="/"><button>Refresh</button></a>
+  </div>
+  <%const date=['Monday-Wednesday','Thursday-Friday','Saturday-Sunday']%>
+  <%readingList.books.forEach((book, index) => { %>
+  <div class="card border-0 mb-4 d-flex flex-column">
+    <p class="date mb-0"><%= date[index] %></p>
+    <div class="card-body row g-0">
+      <div class="col-lg-6">
+        <a href="/book/<%= book.title%>"><%= book.title%></a>
+        <p><%= book.description%></p>
+        <p class="category"><%= book.category%></p>
+      </div>
+      <div class="col-lg-6 p-3">
+        <img
+          src="<%= book.image %>"
+          alt="book-cover"
+          class="w-100 h-100 object-fit-cover rounded-3"
+        />
+      </div>
+    </div>
+  </div>
+  <%})%>
+</section>
+<script>
+  const refreshLink = document.getElementById('refresh-button');
+    refreshLink.addEventListener('click', function() {
+        // Tìm thẻ button bên trong thẻ a
+        const btn = this.querySelector('button');
+        // Đổi nội dung nút
+        btn.innerText = 'Refreshing...';
+        // (Tùy chọn) Làm mờ nút để người dùng biết đang xử lý
+        btn.style.opacity = '0.7';
+        btn.style.cursor = 'wait';
+    });
+</script>
