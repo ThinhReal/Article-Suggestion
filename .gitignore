@@ -1,0 +1,28 @@
+# --- Các file bảo mật (QUAN TRỌNG NHẤT) ---
+.env
+secret.key
+config.js
+
+# --- File hệ thống (Rác) ---
+.DS_Store
+Thumbs.db
+
+# --- Python ---
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# --- Java ---
+*.class
+*.log
+*.jar
+
+# --- Node/Web ---
+node_modules/
+dist/
+build/
+
+# --- IDE (Cấu hình của VSCode/IntelliJ) ---
+.vscode/
+.idea/
